@@ -1,0 +1,41 @@
+<%- include('layouts/header')%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 mx-auto mt-4">
+      <h1>Add Product</h1>
+
+      <form
+        class="row g-3 mt-4"
+        action="/product/add/<%=categories._id%>"
+        method="post"
+      >
+        <div class="col-auto">
+          <select
+            class="form-select form-select-sm"
+            aria-label=".form-select-sm example"
+          >
+            <% categories.forEach((row,index) =>{ %>
+            <option hidden value="">Select one Product</option>
+            <option value="<%=row._id%>" name="categoryName">
+              <%=row.categoryName%>
+            </option>
+            <%})%>
+          </select>
+          <input
+            type="text"
+            name="productName"
+            class="form-control mt-5"
+            id="input"
+            placeholder="Add Product"
+          />
+        </div>
+
+        <div class="col-auto mt-5">
+          <button type="submit" class="btn btn-primary mb-3">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('layouts/footer')%>

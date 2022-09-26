@@ -1,0 +1,19 @@
+<%- include('layouts/header')%>   
+
+<div class=""container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-4">
+            <h1>Add Category</h1>
+            <form class="row g-3 mt-4" action="/category/add" method="post">
+                <div class="col-auto">
+                    <input type="text" name="categoryName" class="form-control" id="input" placeholder="Add Category">
+                </div>
+
+                 <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">   Add   </button>
+                 </div>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('layouts/footer')%>   
